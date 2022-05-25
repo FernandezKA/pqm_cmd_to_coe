@@ -17,7 +17,8 @@ SFIC - set frequency increment carrier
 SFIR - set frequency increment rotator
 SPC - set phase carrier
 SPR - set phase rotator
-JMP - jump to absolute address (future: support labels)
+JMP - jump to label
+AJMP - absolute jmp
 NOP - no of operations
 SMOD - set modulation mode
 
