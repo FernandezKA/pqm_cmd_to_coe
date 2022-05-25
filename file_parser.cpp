@@ -14,6 +14,8 @@ file_parser::file_parser() {
 		//get_write(get_result());
 	}
 }
+
+//For path config for in|out files
 void file_parser::set_path(enum class stream_direction dir){
 	switch (dir) {
 	case stream_direction::all:
@@ -35,7 +37,7 @@ void file_parser::set_path(enum class stream_direction dir){
 	}
 }
 
-
+//Only read input file at path in_path
 vector<string> file_parser::get_read(void) {
 	static string curr_line;
 	static vector<string> temp_vector;
@@ -59,7 +61,7 @@ vector<string> file_parser::get_read(void) {
 	}
 }
 
-
+//Write to the out COE file with current coe syntax rules
 void file_parser::get_write(vector<pair<uint32_t, uint32_t>> dWrite) {
 	if (write_stream.is_open()) {
 		bool is_first = true;
@@ -103,13 +105,17 @@ void file_parser::get_write(vector<pair<uint32_t, uint32_t>> dWrite) {
 	}
 }
 
+//Return readed vector of strings
 vector<string> file_parser::get_result(void) const {
 	return read_result;
 }
+
+//Clear internal with readed files
 void file_parser::clear_read(void) {
 	read_result.clear();
 }
 
+//Print readed file
 void file_parser::print_readed(void) const {
 	for (const auto& s : read_result) {
 		cout << s << endl;

@@ -27,13 +27,17 @@ private:
 		{"SPC", 0x0C},
 		{"SPR", 0x0D},
 		{"JMP", 0x0E},
+		{"AJMP", 0x0E},
 		{"NOP", 0x0F},
 		{"SMOD", 0x10}
 	};
+
 	std::vector<std::pair<uint32_t, uint32_t>> parsed_result;
 	std::map<std::string, uint32_t> labels_library;
 	std::vector<std::pair<std::string, std::string>> parsed_labels;
 	std::string get_naming(const std::string& cmd_name) const;
 	uint32_t get_hex_from_string(const std::string& hex_string) const;
+	std::vector<std::pair<std::string, std::string>> get_labels_replace(const std::vector<std::pair<std::string, std::string>>& pFile);
+	bool find_label(const std::string&, std::map<std::string, uint32_t>&, uint32_t&);
 
 };

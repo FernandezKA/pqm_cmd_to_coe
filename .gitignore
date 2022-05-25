@@ -1,0 +1,50 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.db
+.vs/Gen_cmd_config/v17/.suo
+*.db-shm
+*.db-wal
+*.opendb
+*.ipch
+*.sln
+*.vcxproj
+*.filters
+*.user
+*.txt
+*.bak
+*.recipe
+*.ilk
+*.log
+*.pdb
+*.tlog
+*.idb
