@@ -58,6 +58,7 @@ std::vector<std::pair<uint32_t, uint32_t>> cmd_parser::get_replace(std::vector<s
 			if (cmd_interpret.find(s.first) == cmd_interpret.end()) { //Cmd can't be finded
 				std::cout << "\n\r Command " << s.first << "can't be founded\n\r";
 				std::cerr << "Cmd "<<s.first << " not exist\n\r";
+				//TODO:: add string number
 			}
 			else {//Cmd is exist
 				_cmd = cmd_interpret.at(s.first);
